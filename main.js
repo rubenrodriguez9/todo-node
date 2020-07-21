@@ -24,7 +24,6 @@ let displayTodos = function(data){
     }
     
 }
-console.log(data)
 
 console.log(displayTodos(data))
 
