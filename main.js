@@ -16,17 +16,15 @@ let data = loadTodos(arr)
 
 let displayTodos = function(data){
     for(let i = 0;i <data.length;i++){
-        if(data[i][1] === 'uncomplete') {
-            console.log(data[i][0] + ' -' + ' ✖')
-        }else if(data[i][1] === 'complete'){
-            console.log(data[1][0] + ' -' + ' ✅')
-        }else console.log('this shouldnt happen')
-
-        
-        
+        if(data[i][1] === 'complete'){
+            console.log(data[i][0] + ' - ✅')
+        }else if(data[i][1] === 'uncomplete'){
+            console.log(data[i][0] + ' - X')
+        }
     }
     
 }
+console.log(data)
 
 console.log(displayTodos(data))
 
