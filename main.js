@@ -21,9 +21,14 @@ let displayTodos = function(data){
         }else if(data[i][1] === 'uncomplete'){
             console.log(data[i][0] + ' - X')
         }
+
+        
+        
     }
+    return ' '
     
 }
+console.log(data)
 
 console.log(displayTodos(data))
 
