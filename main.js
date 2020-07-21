@@ -52,6 +52,8 @@ const handleMenu = function(answer){
         interface.question('What task would you like to add?', add)
     }else if(answer === '2'){
         interface.question('What task would you like to remove?', remove)
+    }else if(answer === '3'){
+        interface.question('What todo would you like to complete?', complete)
     }
     
 
@@ -79,6 +81,16 @@ const remove = function(string){
     }
 }
 
+const complete = function(string){
+        for(let i = 0;i < data.length;i++){
+            if(string === data[i][0]){
+                data.splice(i,1);
+                data.push([string, 'complete']);
+                saveTodos(data);
+                interface.close();
+            }
+        }
+}
 
 
 const saveTodos = function(data){
